@@ -1,0 +1,4 @@
+- name: Let us test our brand new nginx role here
+  hosts: all
+  roles:
+    - nginx

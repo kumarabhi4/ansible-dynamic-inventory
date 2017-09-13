@@ -1,0 +1,7 @@
+- name: Configure nginx web server in Ubuntu
+  copy: src=nginx_ubuntu.conf dest=/etc/nginx/nginx.conf backup=yes
+  when: ansible_distribution == "Ubuntu"
+
+- name: Configure nginx web server in CentOS
+  copy: src=nginx_centos.conf dest=/etc/nginx/nginx.conf backup=yes
+  when: ansible_distribution == "CentOS"
